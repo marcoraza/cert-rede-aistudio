@@ -17,16 +17,16 @@ import {
 
 export default function App() {
   const tableData = [
-    { id: 1, dot: 'red', priority: 'Set priority', priorityDropdown: true, alerts: 'Transaction volume', age: '12 days', subject: 'Ellison Mosshart (S)', transaction: 'Single' },
-    { id: 2, dot: 'red', priority: 'HIGH', alerts: 'Number of transactions', age: '12 days', subject: 'Mathew Ihavelongsurname (R)', transaction: 'Single' },
-    { id: 3, dot: 'red', priority: 'HIGH', alerts: 'Transaction volume', age: '15 days', subject: 'Ellison Mosshart (S)', transaction: 'Multi' },
-    { id: 4, dot: 'red', priority: 'HIGH', alerts: 'Transaction volume', age: '12 days', subject: 'Ellison Mosshart (S)', transaction: 'Single' },
-    { id: 5, dot: 'orange', priority: 'MEDIUM', alerts: 'Transaction volume', age: '12 days', subject: 'Ellison Mosshart (S)', transaction: 'Multi' },
-    { id: 6, dot: 'orange', priority: 'MEDIUM', alerts: 'Transaction volume', age: '102 days', subject: 'Ellison Mosshart (S)', transaction: 'Single' },
-    { id: 7, dot: 'orange', priority: 'MEDIUM', alerts: 'Transaction volume', age: '12 days', subject: 'Ellison Mosshart (S)', transaction: 'Single' },
-    { id: 8, dot: 'orange', priority: 'MEDIUM', alerts: 'Transaction volume', age: '12 days', subject: 'Ellison Mosshart (S)', transaction: 'Single' },
-    { id: 9, dot: 'gray', priority: 'LOW', alerts: 'Transaction volume', age: '12 days', subject: 'Ellison Mosshart (S)', transaction: 'Single', hasTooltip: true },
-    { id: 10, dot: 'gray', priority: 'LOW', alerts: 'Transaction volume', age: '12 days', subject: 'Ellison Mosshart (S)', transaction: 'Single' },
+    { id: 1, dot: 'red', priority: 'Definir prioridade', priorityDropdown: true, alerts: 'Volume de transação', age: '12 dias', subject: 'Ellison Mosshart (E)', transaction: 'Única' },
+    { id: 2, dot: 'red', priority: 'ALTA', alerts: 'Número de transações', age: '12 dias', subject: 'Mathew Ihavelongsurname (R)', transaction: 'Única' },
+    { id: 3, dot: 'red', priority: 'ALTA', alerts: 'Volume de transação', age: '15 dias', subject: 'Ellison Mosshart (E)', transaction: 'Múltipla' },
+    { id: 4, dot: 'red', priority: 'ALTA', alerts: 'Volume de transação', age: '12 dias', subject: 'Ellison Mosshart (E)', transaction: 'Única' },
+    { id: 5, dot: 'orange', priority: 'MÉDIA', alerts: 'Volume de transação', age: '12 dias', subject: 'Ellison Mosshart (E)', transaction: 'Múltipla' },
+    { id: 6, dot: 'orange', priority: 'MÉDIA', alerts: 'Volume de transação', age: '102 dias', subject: 'Ellison Mosshart (E)', transaction: 'Única' },
+    { id: 7, dot: 'orange', priority: 'MÉDIA', alerts: 'Volume de transação', age: '12 dias', subject: 'Ellison Mosshart (E)', transaction: 'Única' },
+    { id: 8, dot: 'orange', priority: 'MÉDIA', alerts: 'Volume de transação', age: '12 dias', subject: 'Ellison Mosshart (E)', transaction: 'Única' },
+    { id: 9, dot: 'gray', priority: 'BAIXA', alerts: 'Volume de transação', age: '12 dias', subject: 'Ellison Mosshart (E)', transaction: 'Única' },
+    { id: 10, dot: 'gray', priority: 'BAIXA', alerts: 'Volume de transação', age: '12 dias', subject: 'Ellison Mosshart (E)', transaction: 'Única' },
   ];
 
   return (
@@ -73,7 +73,7 @@ export default function App() {
         <div className="flex-1 flex flex-col px-12 py-10 overflow-y-auto">
           {/* Header */}
           <div className="flex justify-between items-center mb-10">
-            <h1 className="text-3xl font-bold tracking-tight">Alerts</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Alertas</h1>
             <div className="flex items-center gap-6">
               <Search size={20} className="text-gray-600 cursor-pointer" />
               <div className="w-8 h-8 rounded-full bg-[#d49d6a] text-white flex items-center justify-center text-sm font-medium cursor-pointer">
@@ -91,7 +91,7 @@ export default function App() {
                   <span className="text-2xl font-bold">917</span>
                   <span className="text-sm text-green-600 font-medium">+36%</span>
                 </div>
-                <p className="text-sm text-gray-500 mt-1">All current period alerts</p>
+                <p className="text-sm text-gray-500 mt-1">Todos os alertas do período</p>
               </div>
               <div className="w-10 h-8 bg-[#fdf5f0] rounded flex items-center justify-center">
                 <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +108,7 @@ export default function App() {
                   <span className="text-2xl font-bold">31</span>
                   <span className="text-sm text-green-600 font-medium">+23</span>
                 </div>
-                <p className="text-sm text-gray-500 mt-1">Assigned to Me Alerts</p>
+                <p className="text-sm text-gray-500 mt-1">Alertas atribuídos a mim</p>
               </div>
               <div className="w-10 h-8 bg-[#fdf5f0] rounded flex items-center justify-center">
                 <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +125,7 @@ export default function App() {
                   <span className="text-2xl font-bold">272</span>
                   <span className="text-sm text-red-500 font-medium">-53</span>
                 </div>
-                <p className="text-sm text-gray-500 mt-1">90 Days Old Alerts</p>
+                <p className="text-sm text-gray-500 mt-1">Alertas com 90 dias</p>
               </div>
               <div className="w-10 h-8 bg-[#fceef0] rounded flex items-center justify-center">
                 <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,11 +141,11 @@ export default function App() {
             {/* Table Header */}
             <div className="grid grid-cols-[60px_140px_2fr_100px_2fr_120px] gap-4 pb-4 border-b border-gray-200 text-[10px] font-bold text-gray-400 uppercase tracking-wider px-2">
               <div className="flex items-center justify-center gap-1 cursor-pointer">A <ChevronDown size={12} /></div>
-              <div className="flex items-center gap-1 cursor-pointer">PRIORITY <ChevronDown size={12} /></div>
-              <div className="flex items-center gap-1 cursor-pointer">ALERTS <ChevronDown size={12} /></div>
-              <div className="flex items-center gap-1 cursor-pointer">AGE <ChevronDown size={12} /></div>
-              <div className="flex items-center gap-1 cursor-pointer">SUBJECT <ChevronDown size={12} /></div>
-              <div className="flex items-center gap-1 cursor-pointer">TRANSACTION <ChevronDown size={12} /></div>
+              <div className="flex items-center gap-1 cursor-pointer">PRIORIDADE <ChevronDown size={12} /></div>
+              <div className="flex items-center gap-1 cursor-pointer">ALERTAS <ChevronDown size={12} /></div>
+              <div className="flex items-center gap-1 cursor-pointer">TEMPO <ChevronDown size={12} /></div>
+              <div className="flex items-center gap-1 cursor-pointer">ENTIDADE <ChevronDown size={12} /></div>
+              <div className="flex items-center gap-1 cursor-pointer">TRANSAÇÃO <ChevronDown size={12} /></div>
             </div>
 
             {/* Table Body */}
@@ -168,15 +168,6 @@ export default function App() {
                   <div className="text-gray-600">{row.age}</div>
                   <div className="text-gray-800">{row.subject}</div>
                   <div className="text-gray-600">{row.transaction}</div>
-
-                  {/* Tooltip for row 9 */}
-                  {row.hasTooltip && (
-                    <div className="absolute top-10 left-[20%] z-30 bg-[#111111] text-white text-xs p-4 rounded-md w-[320px] shadow-xl leading-relaxed">
-                      High transaction volume (<span className="font-bold">$10M</span>) from one sender and elevated transaction volume (<span className="font-bold">$8M</span>) from one sender to one single recipient
-                      {/* Tooltip Arrow */}
-                      <div className="absolute -top-2 left-10 w-4 h-4 bg-[#111111] transform rotate-45"></div>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -189,8 +180,8 @@ export default function App() {
           {/* Panel Header */}
           <div className="p-10 pb-6 flex justify-between items-start">
             <div>
-              <h2 className="text-2xl font-bold mb-1">Details</h2>
-              <p className="text-xs text-gray-400">Transaction ID #258693219</p>
+              <h2 className="text-2xl font-bold mb-1">Detalhes</h2>
+              <p className="text-xs text-gray-400">ID da Transação #258693219</p>
             </div>
             <button className="p-1.5 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
               <X size={16} className="text-gray-600" />
@@ -206,49 +197,49 @@ export default function App() {
                 $64,897
               </span>
               <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm font-bold rounded-md">
-                UK
+                Reino Unido
               </span>
             </div>
 
             {/* Description Section */}
             <div className="mb-10">
-              <h3 className="font-bold text-[15px] mb-3">High Transaction Volume</h3>
+              <h3 className="font-bold text-[15px] mb-3">Alto Volume de Transação</h3>
               <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                High transaction volume from one sender and elevated transaction volume to single recipient.
+                Alto volume de transação de um remetente e volume elevado de transação para um único destinatário.
               </p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                The combination of source of fund and relationship answers did not match.
+                A combinação da origem dos fundos e as respostas de relacionamento não coincidiram.
               </p>
             </div>
 
             {/* Meta Grid */}
             <div className="grid grid-cols-3 gap-6 mb-12">
               <div>
-                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-2">ASSIGN TO</p>
+                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-2">ATRIBUÍDO A</p>
                 <div className="flex items-center gap-2 text-sm font-medium">
                   <div className="w-2 h-2 rounded-full bg-[#e69d66]"></div>
                   M. Leonas
                 </div>
               </div>
               <div>
-                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-2">PRIORITY</p>
-                <p className="text-sm font-medium">HIGH</p>
+                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-2">PRIORIDADE</p>
+                <p className="text-sm font-medium">ALTA</p>
               </div>
               <div>
                 <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-2">STATUS</p>
-                <p className="text-sm font-medium text-gray-600">Validation</p>
+                <p className="text-sm font-medium text-gray-600">Validação</p>
               </div>
             </div>
 
             {/* Chart Section */}
             <div className="mb-10">
-              <h3 className="font-bold text-[15px] mb-4">Transaction History</h3>
+              <h3 className="font-bold text-[15px] mb-4">Histórico de Transações</h3>
               <div className="flex gap-4 mb-6">
                 <button className="text-xs font-medium text-gray-600 flex items-center gap-1">
-                  Amount Sent <ChevronDown size={12} />
+                  Valor Enviado <ChevronDown size={12} />
                 </button>
                 <button className="text-xs font-medium text-gray-600 flex items-center gap-1">
-                  3-month Volume <ChevronDown size={12} />
+                  Volume de 3 meses <ChevronDown size={12} />
                 </button>
               </div>
 
@@ -297,14 +288,6 @@ export default function App() {
                     
                     {/* Highlighted Bar */}
                     <div className="relative h-[85%] flex flex-col justify-end">
-                      {/* Tooltip */}
-                      <div className="absolute -top-10 -left-6 bg-[#111111] text-white text-[10px] font-bold py-1.5 px-3 rounded z-20 whitespace-nowrap">
-                        $64,897
-                        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#111111] transform rotate-45"></div>
-                      </div>
-                      {/* Dashed line connecting tooltip to bar */}
-                      <div className="absolute -top-2 left-1/2 w-[1px] h-4 border-l-2 border-dashed border-[#e15f4e] z-10"></div>
-                      
                       {/* The bar itself */}
                       <div className="w-3 bg-[#e15f4e] rounded-t-sm h-full opacity-80"></div>
                       {/* Striped pattern overlay for the highlighted bar */}
@@ -315,23 +298,23 @@ export default function App() {
 
                 {/* X-axis labels */}
                 <div className="absolute bottom-0 left-0 right-12 flex justify-between px-6 text-xs font-medium text-gray-400">
-                  <span>March</span>
-                  <span>April</span>
-                  <span>May</span>
+                  <span>Março</span>
+                  <span>Abril</span>
+                  <span>Maio</span>
                 </div>
               </div>
             </div>
 
             {/* Attachments */}
             <div>
-              <h3 className="font-bold text-[15px] mb-4">Attachments</h3>
+              <h3 className="font-bold text-[15px] mb-4">Anexos</h3>
               <div className="flex items-start gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
                 <div className="p-2 bg-gray-100 rounded-md text-gray-500">
                   <FileText size={20} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-800">Personal Information Doc</p>
-                  <p className="text-xs text-gray-400 mt-0.5">12th of March</p>
+                  <p className="text-sm font-medium text-gray-800">Doc. de Informação Pessoal</p>
+                  <p className="text-xs text-gray-400 mt-0.5">12 de Março</p>
                 </div>
               </div>
             </div>
@@ -342,7 +325,7 @@ export default function App() {
           <div className="absolute bottom-0 left-0 right-0 px-10 py-6 bg-white border-t border-gray-100 flex justify-between items-center">
             <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">STATUS</span>
             <button className="flex items-center gap-2 px-4 py-2 bg-[#fdf5f0] text-[#d49d6a] text-sm font-bold rounded-md hover:bg-[#fae8dc] transition-colors">
-              Validation <ChevronDown size={16} />
+              Validação <ChevronDown size={16} />
             </button>
           </div>
 
